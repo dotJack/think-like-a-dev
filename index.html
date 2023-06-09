@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <main style="display: grid; grid-template-columns: 1fr 2fr; gap: 15px">
+      <section id="results" style="background-color:#999;">
+        <h3>Results</h3>
+        <article class="success">
+            <header>Reading input</header>
+            <footer>Rows found: 16312. Rows expected: 16312.</footer>
+        </article>
+        <article class="failure">
+          <header>Filtering out winter months.</header>
+          <footer>Entries found: 13121.  Expected results: 12011.</footer>
+        </article>
+        <article class="failure">
+          <header>Splitting results into odd days</header>
+          <footer>Entries found: 900.  Expected results: 6005.</footer>
+        </article>
+        <article class="failure">
+          <header>Splitting results into even days</header>
+          <footer>Entries found: 3122.  Expected results: 6006.</footer>
+        </article>
+        <article class="failure">
+          <header>Lowest temperature for odd days</header>
+          <footer>Result: 15.5.  Expected: 1.</footer>
+        </article>
+
+        <article class="failure">
+          <header>Highest temperature for even days</header>
+          <footer>Result: 23.2.  Expected: 32.</footer>
+        </article>
+      </section>
+      <section id="overview" style="background-color:#eee;">
+        <h3>Overview</h3>
+        <p>Given a big enough input where manual processing is overwhelming,
+        this program runs through the logic predefined below.</p>
+        <p>A csv file containing 16000ish entries of various weather data is read and parsed
+        following predefined steps. Each step has a check to see if the expected results are received.</p>
+        <p>Each step result is shown next to the expected result</p>
+        <h4>Steps</h4>
+        <ul>
+          <li>Read input (<a href="#">Read More</a>)</li>
+          <li>Filter out winter months (<a href="#">Read More</a>)</li>
+          <li>Split results into odd days (<a href="#">Read More</a>)</li>
+          <li>Split results into even days (<a href="#">Read More</a>)</li>
+          <li>Lowest temperature for odd days (<a href="#">Read More</a>)</li>
+          <li>Highest temperature for even days (<a href="#">Read More</a>)</li>
+        </ul>
+      </section>
+      <input type="file" id="fileInput" onchange="parseFile(this)" />
+      <h2 class="blink_me">Developer design!</h2>
+    </main>
+  </body>
+</html>
